@@ -14,15 +14,6 @@ describe Airport do
       subject.land(plane)
       expect(plane).not_to be_flying
     end
-
-    xcontext "the airport is full" do
-      it "cannot land a plane" do
-        20.times do
-          subject.land(Plane.new)
-          expect{ subject.land(Plane.new) }.to raise_error "Airport is full!"
-        end
-      end
-    end
   end
 
   # The below tests are incomplete. Uncomment them one at a time, finish writing the test then use TDD to build the code.
